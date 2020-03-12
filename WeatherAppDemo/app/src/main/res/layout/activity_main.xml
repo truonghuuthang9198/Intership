@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroup_for_wheatherapp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/feellikeC"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Feels Like C: "
+        android:textSize="15sp"
+        android:textColor="#F5FFF1F1"
+        app:layout_constraintEnd_toEndOf="@+id/uvindex"
+        app:layout_constraintStart_toStartOf="@+id/uvindex"
+        app:layout_constraintTop_toBottomOf="@+id/uvindex" />
+
+    <TextView
+        android:id="@+id/feellikeF"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Feels Like F: "
+        android:textSize="15sp"
+        android:textColor="#F5FFF1F1"
+        app:layout_constraintEnd_toEndOf="@+id/pressure"
+        app:layout_constraintStart_toStartOf="@+id/pressure"
+        app:layout_constraintTop_toBottomOf="@+id/pressure" />
+
+    <TextView
+        android:id="@+id/cityname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:text="Thành phố Hồ Chí Minh"
+        android:textColor="#F5FFF1F1"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/weatherDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Trời nắng"
+        android:textSize="25sp"
+        android:textColor="#F5FFF1F1"
+        app:layout_constraintEnd_toEndOf="@+id/cityname"
+        app:layout_constraintStart_toStartOf="@+id/cityname"
+        app:layout_constraintTop_toBottomOf="@+id/cityname" />
+
+    <TextView
+        android:id="@+id/tempC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="30º"
+        android:textSize="45sp"
+        android:textColor="#F5FFF1F1"
+        app:layout_constraintEnd_toEndOf="@+id/weatherDesc"
+        app:layout_constraintStart_toStartOf="@+id/weatherDesc"
+        app:layout_constraintTop_toBottomOf="@+id/weatherDesc" />
+
+
+    <TextView
+        android:id="@+id/humidity"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Humidity: "
+        android:textSize="15sp"
+        android:textColor="#F5FFF1F1"
+        app:layout_constraintEnd_toStartOf="@+id/windspeed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageState" />
+
+    <TextView
+        android:id="@+id/windspeed"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Wind Speed: "
+        android:textColor="#F5FFF1F1"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/humidity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/humidity"
+        app:layout_constraintTop_toTopOf="@+id/humidity" />
+
+    <TextView
+        android:id="@+id/pressure"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Pressure: "
+        android:textSize="15sp"
+        android:textColor="#F5FFF1F1"
+        app:layout_constraintEnd_toEndOf="@+id/humidity"
+        app:layout_constraintStart_toStartOf="@+id/humidity"
+        app:layout_constraintTop_toBottomOf="@+id/humidity" />
+
+    <TextView
+        android:id="@+id/uvindex"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="UV Index: "
+        android:textSize="15sp"
+        android:textColor="#F5FFF1F1"
+        app:layout_constraintBottom_toBottomOf="@+id/pressure"
+        app:layout_constraintEnd_toEndOf="@+id/windspeed"
+        app:layout_constraintStart_toStartOf="@+id/windspeed"
+        app:layout_constraintTop_toBottomOf="@+id/humidity" />
+
+    <ImageView
+        android:id="@+id/imageState"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/cityname"
+        app:layout_constraintStart_toStartOf="@+id/cityname"
+        app:layout_constraintTop_toBottomOf="@+id/tempC"
+        tools:srcCompat="@tools:sample/avatars[0]" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
